@@ -6,7 +6,8 @@ import java.util.List;
 /**
  * @Author houfeng
  * @Date 2022/9/14 11:41
- * @tag 回溯
+ * @tag 回溯 n皇后
+ * @url https://leetcode.cn/problems/n-queens/
  */
 public class Day02SolveNQueens {
 
