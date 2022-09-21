@@ -1,7 +1,9 @@
 package com.luckly.algorithm.A20220913;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -37,6 +39,22 @@ public class Day01CombinationSumII {
             helpFun(candidates, i+1, target, sum + candidates[i]);
             tempList.remove(tempList.size() - 1);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reduceDate(new Date(1663660800L *1000), new Date(1663642800L *1000)));
+    }
+
+    public static String reduceDate(Date date1, Date date2){
+        long l = date1.getTime() - date2.getTime();
+        long hours = l / 3600000;
+        long l1 = l % 3600000;
+        long minute = l1 / 60000;
+        long l2 = l1 % 60000;
+        long second = l2 / 1000;
+        String x = hours + ":" + minute + ":" + second;
+        System.out.println(x);
+        return x;
     }
     
     /**
